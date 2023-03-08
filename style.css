@@ -1,0 +1,39 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+   text-decoration: none;
+   outline: none;
+   box-sizing: border-box;
+}
+
+/* renk paleti */
+:root{
+    /* light mode */
+    --lightMode-main-back-color: #fff;
+    --lightMode-main-text-color: #000;
+    --lightMode-back-color-1: #333333;
+    --lightMode-back-color-2: #151515;
+    
+    --lightMode-link-text-color-1: #8AB5DC;
+    --lightMode-link-text-color-2: #000;
+
+    /* dark mode */
+    --darkMode-main-back-color: #000;
+    --darkMode-main-text-color: #fff;
+}
+
+.dark-mode{
+    background-color: var(--lightMode-back-color-2);
+}
