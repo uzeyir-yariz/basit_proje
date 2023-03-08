@@ -1,21 +1,11 @@
-/* CSS Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-size: 100%;
-   font: inherit;
-   vertical-align: baseline;
-   text-decoration: none;
-   outline: none;
-   box-sizing: border-box;
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+
+/* reset css style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* renk paleti */
@@ -26,7 +16,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     --lightMode-back-color-1: #333333;
     --lightMode-back-color-2: #151515;
     
-    --lightMode-link-text-color-1: #8AB5DC;
+    --lightMode-link-text-color-1: #0084ff;
     --lightMode-link-text-color-2: #000;
 
     /* dark mode */
@@ -34,6 +24,50 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     --darkMode-main-text-color: #fff;
 }
 
-.dark-mode{
-    background-color: var(--lightMode-back-color-2);
+/* navbar bölümü --------------------------------------------------------------------------------------------------- */
+.page_navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+/* sayfa logosu */
+.page_logo{
+    width: 20%;
+    height: 20%;
+}
+
+/* link ul */
+.page_navbar_ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* link özellikleri */
+.page_navbar_ul_link{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;      
+    color: var(--lightMode-link-text-color-2);
+    transition: 500ms;
+}
+.page_navbar_ul_link_active{color: var(--lightMode-link-text-color-1);}
+.page_navbar_ul_link:hover{opacity: 0.7;}
+
+/* hamburger test */
+@media screen and (max-width: 768px){
+    .page_navbar{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .page_navbar_ul{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
 }
